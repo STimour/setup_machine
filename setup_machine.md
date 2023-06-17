@@ -14,10 +14,20 @@
 - il faut redemarrer la machine ensuite pour que ça fonctionne
 ------------------------------------------------------------------------------------------------
 # II. GIT 
+
+![image](git.png)
+
+
+### 1. Dissier de travail - c'est le dossier dans lequel il faut être (avec le terminal) pour travailler avec git
+### 2. Zone d'index - c'est "l'endroit"( un genre de sac) où on met/indexe toutes les modifications à l'aide de commande "git add" aussi on peut retirer/desindexer certaines modifications qui y sont. Une fois on a le resultat souhaité on peut faire le "commit"
+### 3. Notre commit - l'ensemble des modifications va passer dans le dépôt local sous forme d'un commit 
+
+
+
 ## commandes clés 
 	git config --global user.name "... ..."		git init -> initialisation d'un projet git
 	git config --global user.email "..."  		git status
-							git add ou reset <nom du fichier> ou .
+							                    git add ou reset <nom du fichier> ou .
 							
 ## installation sur linux
     sudo apt install git-all (-all en option)
@@ -32,23 +42,43 @@
 
 ### rensegner le nom et adresse mail
     git config --global user.name "... ..."
-    
     git config --global user.email "..." (il faut mettre le même mail qui dans le github)
 ### pour verifier qui est l'utilisateur
     git config --global --list
-
 #### si on tappe juste git dans le terminl ça nous sortira les commandes utilisable
-
-
 ------------------------
-
 ## On peut passer à l'initialisation, avec "cd" on se met dans le dossier avec un projet puis on tappe 
-
     git init -> initialisation d'un projet git
 ### maitenant on peut faire 
     git status -> ça nous permet voir le status de projet et si les fichiers sont bien suivis
 ### pour faire suivre les fichier par le git on fait 
-    git add <nom du fichier> ou . pour ajouter tout 
-
+    git add <nom du fichier> ou . pour indexer/ajouter tout 
+    git reset <nom du fichier> -> permet desindexer le fichier
 -------
+### visualiser les modifications 
+    git diff 
+    -> il faut faire ça avant le "git add" car cette commande permet visualiser les modifs qui ne sons pas encore passé dans la zone d'index; sinon on fait 
+    git diff --cached
+------------------------
+## On peut passer au commit 
+### commit prend toutes les modifications et les enregistres "sous forme d'un packet" et ce commit lui meme est enregistré dans notre dépôt local
+    git commit -m "premier commit"
+
+
+
+
+
+### commande de creation de la clé 
+## ssh-keygen -t ed25519 -C "your_email@example.com"
+### vieille machine - ssh-keygen -t ecdsa-sk -C "your_email@example.com"
+### on accede au dossier avec la cle puis avec nano on ouvre le fichier et on copie la cle 
+## cd /.ssh
+
+
+
+
+### commande de test de connexion 
+## ssh -T git@github.com
+### git init -> initialisation d'un projet git 
+
 
