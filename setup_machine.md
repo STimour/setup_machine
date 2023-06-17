@@ -25,9 +25,11 @@
 
 
 ## commandes clés 
-	git config --global user.name "... ..."		git init -> initialisation d'un projet git
+	git config --global user.name "..." 		git init -> initialisation d'un projet git
 	git config --global user.email "..."  		git status
 							                    git add ou reset <nom du fichier> ou .
+                                                git commit -m "premier commit"
+                                                git log
 							
 ## installation sur linux
     sudo apt install git-all (-all en option)
@@ -61,12 +63,28 @@
     git diff --cached
 ------------------------
 ## On peut passer au commit 
-### commit prend toutes les modifications et les enregistres "sous forme d'un packet" et ce commit lui meme est enregistré dans notre dépôt local
+- Un commit possède 
+-> un identifiant unique de 40 caractères 'SHA-1'
+-> un esnemble de modifications 
+-> commentaire décrivant le commit
+-> les informations sur l'auteur (nom et email)
+-> une date de création
+-> liste (sha-1) de son ou ses parents
+
+### commit prend toutes les modifications et les enregistres "sous forme d'un packet" et ce commit lui meme est enregistré dans notre dépôt local ainsi quand on regarde l'historique on a plusieurs commit affiché avec le informations
     git commit -m "premier commit"
 
+### L'historique d'un dépôt git constitué d'un ensemble  des commits relié entre eux par un pointeur (cet ensemble est une branche) 
+### pour afficher l'historique 
+    git log
+### pour afficher le contenu d'un commit 
+    git show <SHA-1>
 
-
-
+### si on veut revenir dans la version précédante du projet 
+    git checkout <SHA-1> 
+### pour revenir a la dernière version du projet 
+    git checkout main/master
+-----------------------------------------------------------------------------
 
 ### commande de creation de la clé 
 ## ssh-keygen -t ed25519 -C "your_email@example.com"
