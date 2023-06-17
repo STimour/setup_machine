@@ -17,9 +17,38 @@
 - il faut redemarrer la machine ensuite pour que ça fonctionne
 
 
+# II. GIT 
+ 
+## installation sur linux
+    sudo apt install git-all (-all en option)
+## installation sur mac os
+### - on verifie s'il y est avec le terminal
+### s'il n'y est pas - l'ordi va nous proposer l'installation sinon on peut aller sur le site git-scm.com/download/mac
+## installation sur windows
+### - on va sur le site et on telecharge et on installe 
+--------
+
+## Configuration  
+
+### rensegner le nom et adresse mail
+    git config --global user.name "... ..."
+    
+    git config --global user.email "..." (il faut mettre le même mail qui dans le github)
+### pour verifier qui est l'utilisateur
+    git config --global --list
+
+#### si on tappe juste git dans le terminl ça nous sortira les commandes utilisable
 
 
+------------------------
 
+## On peut passer à l'initialisation, avec "cd" on se met dans le dossier avec un projet puis on tappe 
 
-# ensuite on peut installer nvm 
-#### https://github.com/nvm-sh/nvm
+    git init -> initialisation d'un projet git
+### maitenant on peut faire 
+    git status -> ça nous permet voir le status de projet et si les fichiers sont bien suivis
+### pour faire suivre les fichier par le git on fait 
+    git add <nom du fichier> ou . pour ajouter tout 
+
+-------
+
