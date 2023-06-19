@@ -101,17 +101,16 @@
     ou
     git pull -> on applique ces modifs à notre dossier 
 
-### commande de creation de la clé 
-## ssh-keygen -t ed25519 -C "your_email@example.com"
-### vieille machine - ssh-keygen -t ecdsa-sk -C "your_email@example.com"
-### on accede au dossier avec la cle puis avec nano on ouvre le fichier et on copie la cle 
-## cd /.ssh
+## Creation de la clé ssh 
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+### *vieille machine - ssh-keygen -t ecdsa-sk -C "your_email@example.com"
+### on accede au dossier avec la cle puis avec nano on ouvre le fichier et on copie la cle
+    cd ~/.ssh
+    nano <nom de la clé>.pub
+### Une fois la clé récupéré, on va sur le site git dans les settings on tape sur l'ongle ssh et ensuite ajouter une clé ssh et colle la clé. 
+### Github nous donnes les commandes de *connexion -> on les entre dans le terminal (il faut bien choisir la clé ssh sinon on aura l'erreur d'autentification) 
 
-
-
-
-### commande de test de connexion 
-## ssh -T git@github.com
-### git init -> initialisation d'un projet git 
+### Maintenant on peut tester la connexion 
+    ssh -T git@github.com
 
 
